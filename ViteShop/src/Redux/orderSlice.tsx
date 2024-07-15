@@ -2,12 +2,8 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { api_endpoint } from "../Services/config";
 import { fetchCartItems } from "./cartSlice";
+import { Order } from "../Types";
 
-interface Order {
-    id: string;
-    status: string;
-    // Add other properties as needed
-}
 
 interface OrderState {
     orders: Order[];
@@ -64,7 +60,8 @@ export const addOrder = createAsyncThunk(
             if (axios.isAxiosError(error) && error.response) {
                 return rejectWithValue(error.response.data as string);
             }
-            return rejectWithValue('An unknown error occurred');        }
+            return rejectWithValue('An unknown error occurred');
+        }
     }
 );
 

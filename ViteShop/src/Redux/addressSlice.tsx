@@ -1,16 +1,10 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { api_endpoint } from "../Services/config";
+import { Address } from "../Types";
 
 // Define the Address interface
-interface Address {
-    id: string;
-    name: string;
-    phone: string;
-    address: string;
-    city: string;
-    country: string;
-}
+
 
 // Define the AddressState interface
 interface AddressState {

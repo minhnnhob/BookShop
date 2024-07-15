@@ -3,17 +3,9 @@ import axios from "axios";
 import { api_endpoint, storage } from "../Services/config";
 import { v4 as uuidv4 } from "uuid"; // For unique thumbnail file name
 import { getDownloadURL, ref, uploadBytes } from "@firebase/storage";
+import { Product } from "../Types";
 
 // Define interfaces for the product data
-interface Product {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-  thumbnailUrl?: string;
-  // Add other product fields as necessary
-}
 
 interface FeaturedItems {
   bestSelling: Product[];
@@ -39,7 +31,7 @@ interface AddUpdateProductArgs {
 }
 
 // Fetch featured products
-export const fetchFeaturedProducts = createAsyncThunk<Product[]>(
+export const fetchFeaturedProducts = createAsyncThunk<FeaturedItems>(
   "product/fetchFeaturedProducts",
   async () => {
     const response = await axios.get(`${api_endpoint}/product/featured`);

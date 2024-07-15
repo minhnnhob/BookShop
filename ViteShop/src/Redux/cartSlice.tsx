@@ -1,13 +1,10 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { api_endpoint } from "../Services/config";
+import { CartItem } from "../Types";
 
 // Define the CartItem interface
-interface CartItem {
-    id: string;
-    productId: string;
-    quantity: number;
-}
+
 
 // Define the CartState interface
 interface CartState {

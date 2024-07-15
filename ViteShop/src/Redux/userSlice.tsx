@@ -65,7 +65,7 @@ export const signin = createAsyncThunk<User, SigninPayload, { rejectValue: any }
 );
 
 // Signup
-export const signup = createAsyncThunk<User, SignupPayload, { rejectValue: undefined }>(
+export const signup = createAsyncThunk<User, SignupPayload, { rejectValue: string }>(
   "user/signup",
   async ({ email, password }, { rejectWithValue }) => {
     try {
@@ -76,8 +76,11 @@ export const signup = createAsyncThunk<User, SignupPayload, { rejectValue: undef
       );
       return response.data;
     } catch (error) {
-      return rejectWithValue(error.response.data);
+      if (axios.isAxiosError(error) && error.response) {
+        return rejectWithValue(error.response.data as string);
     }
+    return rejectWithValue('An unknown error occurred');
+}
   }
 );
 
