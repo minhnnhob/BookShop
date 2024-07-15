@@ -1,12 +1,9 @@
 import { createAsyncThunk, createSlice,  } from "@reduxjs/toolkit";
 import axios from "axios";
 import { api_endpoint } from "../Services/config";
+import { Category } from "../Types";
 
-interface Category {
-    id: number;
-    name: string;
-    description: string;
-}
+
 
 interface CategoryState {
     loading: boolean;
