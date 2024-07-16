@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "site":"bookvite-01",
-    "public": "./",
+   
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
