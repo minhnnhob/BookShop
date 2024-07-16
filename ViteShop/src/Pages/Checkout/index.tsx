@@ -44,7 +44,8 @@ export default function Checkout() {
       .dispatch(addOrder({
           shippingAddressId: addresses, paymentMethod: payment,
           id: "",
-          status: ""
+          status: "",
+          date: new Date(),
       }))
       .unwrap()
       .then(() => {

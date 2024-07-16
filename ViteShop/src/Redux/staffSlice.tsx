@@ -1,15 +1,10 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import axios from "axios";
 import { api_endpoint } from "../Services/config";
+import { StaffMember } from "../Types";
 
 // Define interfaces for staff data
-interface StaffMember {
-  id: string;
-  name: string;
-  phone: string;
-  address: string;
-  email: string;
-}
+
 
 interface StaffState {
   loading: boolean;

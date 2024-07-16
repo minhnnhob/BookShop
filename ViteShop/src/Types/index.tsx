@@ -11,6 +11,7 @@ export interface Order {
   status: string;
   shippingAddressId: string;
   paymentMethod: string;
+  date: Date;
   // Add other properties as needed
 }
 
@@ -43,4 +44,13 @@ export interface Product {
 export interface Category {
   id: string;
   name: string;
+}
+
+export interface StaffMember {
+  id: string;
+  name: string;
+  phone: string;
+  address: string;
+  email: string;
+  password: string;
 }
