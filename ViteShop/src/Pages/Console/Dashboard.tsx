@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { Bar, Pie } from "react-chartjs-2";
 import { useSelector } from "react-redux";
 import store, { RootState } from "../../Redux/store";

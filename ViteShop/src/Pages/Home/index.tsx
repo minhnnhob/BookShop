@@ -5,7 +5,8 @@ import { useEffect } from "react";
 import { fetchFeaturedProducts } from "../../Redux/productSlice";
 import store, { RootState } from "../../Redux/store";
 import { addItemToCart } from "../../Redux/cartSlice";
-import { Product } from "../../Types";
+
+
 
 
 export default function Home() {
@@ -50,7 +51,7 @@ function Carousel() {
                 <img
                   alt=""
                   className="position-absolute w-100 h-100"
-                  src={require("./2560.webp")}
+                  src={"./2560.webp"}
                   style={{ objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -76,7 +77,7 @@ function Carousel() {
                 <img
                   alt=""
                   className="position-absolute w-100 h-100"
-                  src={require("./shiromani-kant-mo3fotg62ao-unsplash.jpg")}
+                  src={"./shiromani-kant-mo3fotg62ao-unsplash.jpg"}
                   style={{ objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -102,7 +103,7 @@ function Carousel() {
                 <img
                   alt=""
                   className="position-absolute w-100 h-100"
-                  src={require("./best-romance-novels-featured-1280x720.jpg")}
+                  src={"./best-romance-novels-featured-1280x720.jpg"}
                   style={{ objectFit: "cover" }}
                 />
                 <div className="carousel-caption d-flex flex-column align-items-center justify-content-center">
@@ -128,7 +129,7 @@ function Carousel() {
           <div className="product-offer mb-30" style={{ height: "200px" }}>
             <img
               className="img-fluid"
-              src={require("./pngtree-delivery-truck-is-parked-next-to-a-3d-smartphone-image_2659337.png")}
+              src={"./pngtree-delivery-truck-is-parked-next-to-a-3d-smartphone-image_2659337.png"}
               alt=""
             />
             <div className="offer-text">
@@ -137,7 +138,7 @@ function Carousel() {
             </div>
           </div>
           <div className="product-offer mb-30" style={{ height: "200px" }}>
-            <img className="img-fluid" src={require("./books.png")} alt="" />
+            <img className="img-fluid" src={"./books.png"} alt="" />
             <div className="offer-text">
               <h6 className="text-secondary">
                 1000+ books in different language

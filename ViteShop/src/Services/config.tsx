@@ -23,4 +23,4 @@ const app = initializeApp(firebaseConfig);
 
 export const storage = getStorage(app);
 
-// export const api_endpoint = "http://localhost:5173/"
+export const api_endpoint = "https://localhost:7014/"

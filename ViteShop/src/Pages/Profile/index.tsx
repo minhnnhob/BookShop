@@ -1,9 +1,12 @@
-import React from "react";
+import "../../assets/CSS/style.css";
+import "../../assets/CSS/animate.min.css";
+
 import AuthorizedComponent from "../../Components/Authorization/authorizedComponent";
 import PersonalInformation from "./personalInformation";
 import Addresses from "./addresses";
 import Orders from "./orders";
 import AuthorizedPage from "../../Components/Authorization/authorizedPage";
+
 
 export default function Profile() {
   return (

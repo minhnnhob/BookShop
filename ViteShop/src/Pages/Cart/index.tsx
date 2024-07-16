@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import store, { RootState } from "../../Redux/store";
 import { removeItemFromCart, updateItemInCart } from "../../Redux/cartSlice";
 import { useEffect, useState } from "react";
@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 import AuthorizedPage from "../../Components/Authorization/authorizedPage";
 import { CartItem } from "../../Types"; // Import CartItem from shared types file
 
-interface CartState {
-  items: CartItem[];
-}
 
 interface CartSummaryProps {
   items: CartItem[];

@@ -82,7 +82,7 @@ interface StaffItemProps {
 }
 
 function StaffItem({ member, editCallback }: StaffItemProps) {
-  const { id, name, phone, address,email,password } = member;
+  const { name, phone, address,email } = member;
 
   return (
     <tr>

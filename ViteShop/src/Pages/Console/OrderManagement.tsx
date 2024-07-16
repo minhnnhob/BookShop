@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
-import AuthorizedComponent from "../../Components/Authorization/authorizedComponent";
+// import AuthorizedComponent from "../../Components/Authorization/authorizedComponent";
 import { useEffect, useState } from "react";
 import store from "../../Redux/store";
 import LoadingLayer from "../../Components/LoadingLayer";
 import {
   fetchAllOrders,
   fetchOrderById,
-  updateOrderStatus,
+  
 } from "../../Redux/orderSlice";
 import Popup from "../../Components/Popup";
 import DateTimeConverter from "../../Components/Converter/dateTime";
@@ -135,7 +135,7 @@ const Order: React.FC<OrderProps> = ({ order, openDetailCallback }) => {
 const OrderDetailPopup: React.FC<OrderDetailPopupProps> = ({ order, closeCallback }) => {
   const updating = useSelector((state: RootState) => state.order.updating);
   const [total, setTotal] = useState<number>(0);
-  const [status, setStatus] = useState<string>(order.status);
+//   const [status, setStatus] = useState<string>(order.status);
 
   // Calculate total price
   useEffect(() => {
@@ -148,9 +148,9 @@ const OrderDetailPopup: React.FC<OrderDetailPopupProps> = ({ order, closeCallbac
     setTotal(tempTotal);
   }, [order]);
 
-  const handleSaveStatus = () => {
-    store.dispatch(updateOrderStatus({ id: order.id, status: status }));
-  };
+//   const handleSaveStatus = () => {
+//     store.dispatch(updateOrderStatus({ id: order.id, status: status }));
+//   };
 
   return (
     <Popup>

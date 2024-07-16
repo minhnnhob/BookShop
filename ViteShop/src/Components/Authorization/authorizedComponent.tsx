@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/types"; // Assuming you have a RootState type defined
+import { RootState } from "../../Redux/store"; // Assuming you have a RootState type defined
 
 interface Props {
     children: React.ReactNode;
@@ -14,7 +14,7 @@ export default function AuthorizedComponent({
 
     if (!requiredRoles && loggedIn) return children; // Role not specified and user logged in
 
-    if (requiredRoles && requiredRoles.includes(role)) return children; // Role specified and user has that role
+    if (requiredRoles && requiredRoles.includes(role as string)) return children; // Role specified and user has that role
 
     return null;
 }

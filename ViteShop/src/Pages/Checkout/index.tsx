@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ChangeEvent } from "react";
+import  { useEffect, useState, ChangeEvent } from "react";
 import { useSelector } from "react-redux";
 import store from "../../Redux/store";
 import { addAddress, fetchAddresses } from "../../Redux/addressSlice";
@@ -12,17 +12,17 @@ import { CartItem } from "../../Types";
 import { Address } from "../../Types";
 
 
-interface AddAddressData {
-    id?: string; // Optional id field
-  name: string;
-  phone: string;
-  address: string;
-  city: string;
-  country: string;
-  state?: string; // Optional state
-  zip?: string; // Optional zip
-  isDefault?: boolean; // Optional isDefault flag
-}
+// interface AddAddressData {
+//     id?: string; // Optional id field
+//   name: string;
+//   phone: string;
+//   address: string;
+//   city: string;
+//   country: string;
+//   state?: string; // Optional state
+//   zip?: string; // Optional zip
+//   isDefault?: boolean; // Optional isDefault flag
+// }
 
 export default function Checkout() {
   const navigate = useNavigate();

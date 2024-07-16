@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import AuthorizedComponent from "../Authorization/authorizedComponent";
 import store from "../../Redux/store";
-import { toggleNavCat } from "../../Redux/categorySlice";
+import { toggleNavCat } from "../../Redux/CategorySlice"
+import { RootState } from "../../Redux/store";
 
 export default function NavigationBar() {
     return (
@@ -116,7 +117,7 @@ function Categories() {
             <div
                 className="btn d-flex align-items-center justify-content-between bg-primary w-100"
                 data-toggle="collapse"
-                href="#navbar-vertical"
+                ref="#navbar-vertical"
                 onClick={() => {
                     store.dispatch(toggleNavCat());
                 }}
@@ -220,11 +221,13 @@ function ActionButtons() {
 
 interface CategoryItemProps {
     name: string;
-    id: number;
-    count: number;
+    id: string;
+    count: string; // Change the type of 'count' to string
 }
 
 function CategoryItem({ name, id, count }: CategoryItemProps) {
+    const countNumber = parseInt(count); // Convert 'count' to a number
+
     return (
         <Link
             to={{ pathname: "/product", search: `category=${id}` }}
@@ -232,7 +235,7 @@ function CategoryItem({ name, id, count }: CategoryItemProps) {
             style={{ display: "flex", justifyContent: "space-between" }}
         >
             <div>{name}</div>
-            <div className="">{count} </div>
+            <div className="">{countNumber} </div> // Use the converted 'count' value
         </Link>
     );
 }
