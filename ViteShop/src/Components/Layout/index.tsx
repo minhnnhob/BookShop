@@ -1,11 +1,13 @@
 import { Outlet } from "react-router-dom";
-import Footer from "../Footer"
+import Footer from "../Footer";
+import NavigationBar from "../NavigationBar";
 
 export default function StandardLayout() {
-return (
+  return (
     <>
-        <Outlet />
-        <Footer />
+      <NavigationBar />
+      <Outlet />
+      <Footer />
     </>
-);
+  );
 }
