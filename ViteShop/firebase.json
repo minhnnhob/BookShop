@@ -1,6 +1,6 @@
 {
   "hosting": {
-   
+    "site":"bookvite-01",
     "public": "dist",
     "ignore": [
       "firebase.json",
@@ -10,7 +10,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "./index.html"
+        "destination": "/index.html"
       }
     ]
   }
