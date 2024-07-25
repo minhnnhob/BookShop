@@ -55,3 +55,8 @@ export interface StaffMember {
   email: string;
   password: string;
 }
+
+export interface AddUpdateProductArgs {
+  productData: Product;
+  thumbnailFile: File;
+}
